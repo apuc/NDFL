@@ -11,13 +11,23 @@
         'basePath'            => dirname(__DIR__),
         'controllerNamespace' => 'backend\controllers',
         'bootstrap'           => ['log'],
-        'modules'             => [],
+        'modules'             => [
+            'login'     => [
+                'class' => 'backend\modules\login\Login',
+            ],
+            'adminpage' => [
+                'class' => 'backend\modules\adminpage\AdminPage',
+            ],
+            'manager'   => [
+                'class' => 'backend\modules\manager\Manager',
+            ],
+        ],
         'components'          => [
             'request'      => [
                 'baseUrl' => '/secure',
             ],
             'user'         => [
-                'identityClass'   => 'common\models\User',
+                'identityClass'   => 'common\models\db\User',
                 'enableAutoLogin' => true,
             ],
             'log'          => [
@@ -31,10 +41,14 @@
             ],
             'urlManager'   => [
                 'enablePrettyUrl' => true,
+                'showScriptName'  => false,
                 'rules'           => [
-                    // your rules go here
+                    'login'            => 'login/login/view',
+                    ''                 => 'adminpage/admin/view',
+                    'logout'           => 'login/login/logout',
+                    'manager'          => 'manager/manager',
+                    'manager/<action>' => 'manager/manager/<action>',
                 ],
-                // ...
             ],
             'errorHandler' => [
                 'errorAction' => 'site/error',

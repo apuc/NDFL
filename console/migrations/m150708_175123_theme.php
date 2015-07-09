@@ -3,6 +3,12 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
+    /**
+     * Class m150708_175123_theme
+     *
+     * это разговор
+     */
+
 class m150708_175123_theme extends Migration
 {
     public function up()

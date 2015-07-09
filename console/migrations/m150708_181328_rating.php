@@ -24,8 +24,8 @@ class m150708_181328_rating extends Migration
 
     public function down()
     {
-        $this->dropForeignKey('user_answer_fk', 'rating');
-        $this->dropForeignKey('answer_answer_fk', 'rating');
+        $this->dropForeignKey('user_rating_fk', 'rating');
+        $this->dropForeignKey('answer_rating_fk', 'rating');
 
         $this->dropTable('rating');
     }

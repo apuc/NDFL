@@ -24,9 +24,9 @@
 
         public function down()
         {
-            echo "m150708_180213_question cannot be reverted.\n";
+            $this->dropForeignKey('theme_question_fk', 'question');
 
-            return false;
+            $this->dropTable('question');
         }
 
         /*

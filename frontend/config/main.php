@@ -16,7 +16,7 @@
                 'baseUrl' => '',
             ],
             'user'         => [
-                'identityClass'   => 'common\models\User',
+                'identityClass'   => 'common\models\db\User',
                 'enableAutoLogin' => true,
             ],
             'log'          => [
