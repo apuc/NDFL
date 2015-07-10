@@ -26,6 +26,7 @@
             ],
             'review'  => [
                 'class' => 'backend\modules\review\Review',
+            ],
             'news' => [
                 'class' => 'backend\modules\news\News',
             ],
