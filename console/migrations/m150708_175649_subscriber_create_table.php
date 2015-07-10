@@ -3,7 +3,7 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
-class m150708_175649_subscriber extends Migration
+class m150708_175649_subscriber_create_table extends Migration
 {
     public function up()
     {

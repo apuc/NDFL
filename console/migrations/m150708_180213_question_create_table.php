@@ -3,7 +3,7 @@
     use yii\db\Schema;
     use yii\db\Migration;
 
-    class m150708_180213_question extends Migration
+    class m150708_180213_question_create_table extends Migration
     {
         public function up()
         {
@@ -16,7 +16,7 @@
                 'id'       => Schema::TYPE_PK,
                 'text'     => Schema::TYPE_TEXT . ' NOT NULL',
                 'theme_id' => Schema::TYPE_INTEGER . ' NOT NULL',
-                'data'     => Schema::TYPE_INTEGER . '(10) NOT NULL',
+                'date'     => Schema::TYPE_INTEGER . '(10) NOT NULL',
             ], $tableOptions);
 
             $this->addForeignKey('theme_question_fk', 'question', 'theme_id', 'theme', 'id', 'CASCADE', 'CASCADE');

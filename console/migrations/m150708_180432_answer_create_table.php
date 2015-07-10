@@ -3,7 +3,7 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
-class m150708_180432_answer extends Migration
+class m150708_180432_answer_create_table extends Migration
 {
     public function up()
     {
@@ -17,7 +17,7 @@ class m150708_180432_answer extends Migration
             'user_id' => Schema::TYPE_INTEGER . ' NOT NULL',
             'question_id' => Schema::TYPE_INTEGER . ' NOT NULL',
             'text'     => Schema::TYPE_TEXT . ' NOT NULL',
-            'data'     => Schema::TYPE_INTEGER . '(10) NOT NULL',
+            'date'     => Schema::TYPE_INTEGER . '(10) NOT NULL',
         ], $tableOptions);
 
         $this->addForeignKey('user_answer_fk', 'answer', 'user_id', 'user', 'id', 'RESTRICT', 'CASCADE');

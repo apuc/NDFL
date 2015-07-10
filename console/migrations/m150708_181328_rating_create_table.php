@@ -3,7 +3,7 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
-class m150708_181328_rating extends Migration
+class m150708_181328_rating_create_table extends Migration
 {
     public function up()
     {

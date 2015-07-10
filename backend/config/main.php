@@ -21,6 +21,9 @@
             'manager'   => [
                 'class' => 'backend\modules\manager\Manager',
             ],
+            'category'  => [
+                'class' => 'backend\modules\category\Category',
+            ],
         ],
         'components'          => [
             'request'      => [
@@ -43,11 +46,12 @@
                 'enablePrettyUrl' => true,
                 'showScriptName'  => false,
                 'rules'           => [
-                    'login'            => 'login/login/view',
-                    ''                 => 'adminpage/admin/view',
-                    'logout'           => 'login/login/logout',
-                    'manager'          => 'manager/manager',
-                    'manager/<action>' => 'manager/manager/<action>',
+                    'login'             => 'login/login/view',
+                    ''                  => 'adminpage/admin/view',
+                    'logout'            => 'login/login/logout',
+                    'manager'           => 'manager/manager',
+                    'manager/<action>'  => 'manager/manager/<action>',
+                    'category/<action>' => 'category/category/<action>'
                 ],
             ],
             'errorHandler' => [

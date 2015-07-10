@@ -3,7 +3,7 @@
     use yii\db\Schema;
     use yii\db\Migration;
 
-    class m130524_201442_user extends Migration
+    class m130524_201442_user_create_table extends Migration
     {
         public function up()
         {
@@ -32,14 +32,14 @@
             $salt = sha1(time() . '76s3d');
 
             $this->insert("user", [
-                'email'       => 'admin@ndfl.ru',
-                'password'    => hash_hmac('sha512', 'admin', $salt),
-                'name'        => 'Иванов',
-                'salt'        => $salt,
-                'surname'     => 'Иван',
-                'patronymic'  => 'Иваныч',
-                'status'      => \common\constant\Status::ACTIVE,
-                'user_type'   => \common\constant\UserType::ADMINISTRATOR,
+                'email'      => 'admin@ndfl.ru',
+                'password'   => hash_hmac('sha512', 'admin', $salt),
+                'name'       => 'Иванов',
+                'salt'       => $salt,
+                'surname'    => 'Иван',
+                'patronymic' => 'Иваныч',
+                'status'     => \common\constants\Status::ACTIVE,
+                'user_type'  => \common\constants\UserType::ADMINISTRATOR,
             ]);
         }
 

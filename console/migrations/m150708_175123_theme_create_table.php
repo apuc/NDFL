@@ -4,12 +4,12 @@ use yii\db\Schema;
 use yii\db\Migration;
 
     /**
-     * Class m150708_175123_theme
+     * Class m150708_175123_theme_create_table
      *
      * это разговор
      */
 
-class m150708_175123_theme extends Migration
+class m150708_175123_theme_create_table extends Migration
 {
     public function up()
     {
@@ -24,7 +24,7 @@ class m150708_175123_theme extends Migration
             'category_id' => Schema::TYPE_INTEGER . ' NOT NULL',
             'title'       => Schema::TYPE_STRING . '(250) NOT NULL',
             'is_visible'  => Schema::TYPE_INTEGER . ' NOT NULL',
-            'data'        => Schema::TYPE_INTEGER . '(10)',
+            'date'        => Schema::TYPE_INTEGER . '(10)',
         ], $tableOptions);
 
         $this->addForeignKey('user_theme_fk', 'theme', 'user_id', 'user', 'id', 'RESTRICT', 'CASCADE');
