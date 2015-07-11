@@ -32,7 +32,7 @@
             'user'         => [
                 'identityClass'   => 'common\models\db\User',
                 'enableAutoLogin' => true,
-                'loginUrl' => 'login',
+                'loginUrl'        => 'login',
             ],
             'log'          => [
                 'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -52,6 +52,7 @@
                     'logout'            => 'login/login/logout',
                     'manager'           => 'manager/manager',
                     'manager/<action>'  => 'manager/manager/<action>',
+                    'category'          => 'category/category/index',
                     'category/<action>' => 'category/category/<action>'
                 ],
             ],
