@@ -2,6 +2,7 @@
 
 namespace backend\modules\news\controllers;
 
+use linchpinstudios\filemanager\assets\FilemanagerTinyAssets;
 use Yii;
 use backend\modules\news\models\db\News;
 use backend\modules\news\models\db\NewsSearch;

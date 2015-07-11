@@ -7,7 +7,7 @@
     /* @var $model backend\modules\manager\models\db\User */
 
     $this->title = 'Профиль: ';
-    $this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
+    $this->params['breadcrumbs'][] = ['label' => 'Профиль', 'url' => ['index']];
     $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-view">

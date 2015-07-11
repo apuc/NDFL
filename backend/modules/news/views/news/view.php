@@ -1,14 +1,14 @@
 <?php
 
-use yii\helpers\Html;
-use yii\widgets\DetailView;
+    use yii\helpers\Html;
+    use yii\widgets\DetailView;
 
-/* @var $this yii\web\View */
-/* @var $model backend\modules\news\models\db\News */
+    /* @var $this yii\web\View */
+    /* @var $model backend\modules\news\models\db\News */
 
-$this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'News', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+    $this->title = $model->title;
+    $this->params['breadcrumbs'][] = ['label' => 'News', 'url' => ['index']];
+    $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">
 
@@ -21,25 +21,28 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Редактировать', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
-            'data' => [
+            'data'  => [
                 'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
+                'method'  => 'post',
             ],
         ]) ?>
         <?= Html::a('Назад', ['/news'], ['class' => 'btn btn-info']) ?>
     </p>
 
     <?= DetailView::widget([
-        'model' => $model,
+        'model'      => $model,
         'attributes' => [
             'id',
             'title',
             'tags',
-            'text:ntext',
+            [
+                'attribute' => 'text',
+                'format'    => 'html',
+            ],
             'dt_add:datetime',
             [
                 'attribute' => 'status',
-                'value' => \common\constants\Status::getStatusNew($model->status)
+                'value'     => \common\constants\Status::getStatusNew($model->status)
             ]
         ],
     ]) ?>

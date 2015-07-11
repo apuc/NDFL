@@ -1,14 +1,14 @@
 <?php
 
-use yii\helpers\Html;
-use yii\grid\GridView;
+    use yii\helpers\Html;
+    use yii\grid\GridView;
 
-/* @var $this yii\web\View */
-/* @var $searchModel backend\modules\news\models\db\NewsSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
+    /* @var $this yii\web\View */
+    /* @var $searchModel backend\modules\news\models\db\NewsSearch */
+    /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'News';
-$this->params['breadcrumbs'][] = $this->title;
+    $this->title = 'News';
+    $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="news-index">
 
@@ -22,15 +22,23 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
+        'filterModel'  => $searchModel,
+        'columns'      => [
             //['class' => 'yii\grid\SerialColumn'],
 
             //'id',
             'title',
             'tags',
-            'text:ntext',
-            'dt_add',
+            [
+                'attribute' => 'text',
+                'format'    => 'html',
+            ],
+            [
+                'attribute' => 'dt_add',
+                'value'     => function ($model) {
+                    return Yii::$app->formatter->asDatetime($model->dt_add);
+                }
+            ],
             // 'status',
 
             ['class' => 'yii\grid\ActionColumn'],
