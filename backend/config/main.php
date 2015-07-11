@@ -57,7 +57,9 @@
                     ''                  => 'adminpage/admin/view',
                     'logout'            => 'login/login/logout',
                     'manager'           => 'manager/manager',
+                    'review'            => 'review/review',
                     'manager/<action>'  => 'manager/manager/<action>',
+                    'review/<action>'   => 'review/review/<action>',
                     'category/<action>' => 'category/category/<action>'
                 ],
             ],
