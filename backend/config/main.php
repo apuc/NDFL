@@ -24,6 +24,12 @@
             'category'  => [
                 'class' => 'backend\modules\category\Category',
             ],
+            'review'  => [
+                'class' => 'backend\modules\review\Review',
+            ],
+            'news' => [
+                'class' => 'backend\modules\news\News',
+            ],
         ],
         'components'          => [
             'request'      => [
