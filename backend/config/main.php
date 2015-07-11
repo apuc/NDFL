@@ -24,6 +24,9 @@
             'category'  => [
                 'class' => 'backend\modules\category\Category',
             ],
+            'news' => [
+                'class' => 'backend\modules\news\News',
+            ],
         ],
         'components'          => [
             'request'      => [
