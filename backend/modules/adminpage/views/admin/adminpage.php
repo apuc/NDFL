@@ -4,4 +4,5 @@
     <div class="row"><a href="<?= \yii\helpers\Url::to('manager') ?>">Управление административными пользователями</a>
     </div>
     <div class="row"><a href="<?= \yii\helpers\Url::to('category') ?>">Управление категориями</a></div>
+    <div class="row"><a href="<?= \yii\helpers\Url::to('news') ?>">Новости</a></div>
 </div>

@@ -10,6 +10,11 @@ $this->params['breadcrumbs'][] = ['label' => 'News', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
+<div class="row">
+    <?= Html::a('Назад', ['/'], ['class' => 'btn btn-info']) ?>
+</div>
+
+
 <div class="news-update">
 
     <h1><?= Html::encode($this->title) ?></h1>

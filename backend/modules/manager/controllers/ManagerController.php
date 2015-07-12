@@ -66,8 +66,8 @@
 
                 $model->status = 1;
 
-                $model->time_create = time();
-                $model->time_update = time();
+                $model->created_at = time();
+                $model->updated_at = time();
 
                 if ($model->validate()) {
                     $model->save();
@@ -103,7 +103,7 @@
             $oldImage = $model->image;
 
             if ($model->load(Yii::$app->request->post())) {
-                $model->time_update = time();
+                $model->updated_at = time();
 
                 if ($oldPassword != $model->password)
                     $model->generatePassword($model->password);

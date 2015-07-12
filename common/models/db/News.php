@@ -44,7 +44,7 @@ class News extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
+            'title' => 'Заголовок',
             'tags' => 'Tags',
             'text' => 'Text',
             'dt_add' => 'Dt Add',
