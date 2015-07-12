@@ -40,6 +40,7 @@ return [
             'enableAutoLogin' => true,
             'loginUrl' => 'login',
         ],
+
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -56,12 +57,18 @@ return [
                 'login' => 'login/login/view',
                 '' => 'adminpage/admin/view',
                 'logout' => 'login/login/logout',
+
                 'manager' => 'manager/manager',
                 'manager/<action>' => 'manager/manager/<action>',
+
                 'news' => 'news/news',
                 'news/<action>' => 'news/news/<action>',
+
                 'category' => 'category/category/index',
-                'category/<action>' => 'category/category/<action>'
+                'category/<action>' => 'category/category/<action>',
+
+                'review' => 'review/review',
+                'review/<action>' => 'review/review/<action>',
             ],
         ],
         'errorHandler' => [

@@ -11,21 +11,22 @@ $this->params['breadcrumbs'][] = ['label' => 'News', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">
-    <?= Html::a('Назад', ['/'], ['class' => 'btn btn-info']) ?>
+
 </div>
 <div class="news-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('Редактировать', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
                 'method' => 'post',
             ],
         ]) ?>
+        <?= Html::a('Назад', ['/news'], ['class' => 'btn btn-info']) ?>
     </p>
 
     <?= DetailView::widget([
@@ -35,8 +36,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'tags',
             'text:ntext',
-            'dt_add',
-            'status',
+            'dt_add:datetime',
+            [
+                'attribute' => 'status',
+                'value' => \common\constants\Status::getStatusNew($model->status)
+            ]
         ],
     ]) ?>
 

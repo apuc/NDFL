@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'i
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="row">
-    <?= Html::a('Назад', ['/'], ['class' => 'btn btn-info']) ?>
+    <?= Html::a('Назад', ['/news'], ['class' => 'btn btn-info']) ?>
 </div>
 
 

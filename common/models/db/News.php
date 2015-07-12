@@ -30,10 +30,11 @@ class News extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'tags', 'text', 'dt_add', 'status'], 'required'],
+            [['title', 'tags', 'text', 'status'], 'required'],
             [['text'], 'string'],
-            [['dt_add', 'status'], 'integer'],
-            [['title', 'tags'], 'string', 'max' => 255]
+            [['status'], 'integer'],
+            [['title', 'tags'], 'string', 'max' => 255],
+            ['dt_add' , 'safe']
         ];
     }
 
@@ -45,10 +46,10 @@ class News extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'title' => 'Заголовок',
-            'tags' => 'Tags',
-            'text' => 'Text',
-            'dt_add' => 'Dt Add',
-            'status' => 'Status',
+            'tags' => 'Теги',
+            'text' => 'Текст',
+            'dt_add' => 'Дата создания',
+            'status' => 'Статус',
         ];
     }
 }
